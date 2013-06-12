@@ -1,6 +1,6 @@
 Sinatra GitHub OAuth Sample
 ===========================
-Sinatra and OAuth Sample with GitHub API v3
+Sinatra and OAuth Sample with [GitHub API v3](http://developer.github.com/v3/oauth/#web-application-flow)
 
 * https://github.com/shokai/sinatra-github-oauth-sample
 
