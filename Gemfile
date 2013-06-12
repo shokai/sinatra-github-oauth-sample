@@ -1,0 +1,13 @@
+source 'https://rubygems.org'
+
+gem 'foreman'
+gem 'logger'
+gem 'sinatra-contrib'
+gem 'thin'
+gem 'haml'
+gem 'sass'
+gem 'json'
+gem 'httparty'
+gem 'octokit'
+gem 'dalli'
+gem 'hashie'

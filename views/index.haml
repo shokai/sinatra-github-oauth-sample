@@ -1,0 +1,25 @@
+- if err = error?
+  - content_for :html_foot do
+    :javascript
+      alert("error: #{err}");
+
+- content_for :header do
+  %h1= app_name
+
+- unless @user
+  %h2 Please Login
+- else
+  %h2 Your Gists
+  %ul
+    - @gists.each do |gist|
+      - title = gist.description.empty? ? gist.html_url : gist.description
+      %li
+        %a{:href => gist.html_url}= title
+  %h2 Your Repos
+  %ul
+    - @repos.each do |repo|
+      %li
+        %a{:href => repo.html_url}= repo.full_name
+        - unless repo.description.empty?
+          %br
+          %span= repo.description
