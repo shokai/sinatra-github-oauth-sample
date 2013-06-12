@@ -1,5 +1,7 @@
 Sinatra GitHub OAuth Sample
 ===========================
+Sinatra and OAuth Sample with GitHub API v3
+
 
 * https://github.com/shokai/sinatra-github-oauth-sample
 
@@ -8,6 +10,7 @@ Requirements
 ------------
 - Ruby 1.8.7 ~ 2.0.0
 - memcached
+- GitHub
 
 
 Install Dependencies
