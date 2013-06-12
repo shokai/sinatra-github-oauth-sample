@@ -16,6 +16,7 @@ require 'sinatra/content_for'
 require 'haml'
 require 'sass'
 require 'json'
+require 'hashie'
 $:.unshift File.dirname(__FILE__)
 require 'libs/cache'
 require 'helpers/helper'
