@@ -2,8 +2,12 @@ Sinatra GitHub OAuth Sample
 ===========================
 Sinatra and OAuth Sample with GitHub API v3
 
-
 * https://github.com/shokai/sinatra-github-oauth-sample
+
+
+Demo
+----
+- http://sinatra-github-oauth-sample.herokuapp.com
 
 
 Requirements
@@ -23,7 +27,6 @@ Install Dependencies
 
 Config
 ------
-
 
 ### GitHub Config
 [Register new Application](https://github.com/settings/applications) on GitHub
