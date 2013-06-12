@@ -1,6 +1,6 @@
 helpers do
   def app_name
-    "GitHub OAuth Sample"
+    "Sinatra GitHub OAuth Sample"
   end
 
   def app_root
