@@ -9,9 +9,15 @@
 - unless @user
   %h2 Please Login
 - else
+  %h2 Your Gists
+  %ul
+    - @github["gists"].each do |gist|
+      %li
+        - title = gist["description"].empty? ? gist["html_url"] : gist["description"]
+        %a{:href => gist["html_url"]}= title
   %h2 Your Repos
   %ul
-    - @repos.each do |repo|
+    - @github["repos"].each do |repo|
       %li
         %a{:href => repo["html_url"]}= repo["full_name"]
         - unless repo["description"].empty?

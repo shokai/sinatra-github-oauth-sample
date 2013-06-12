@@ -1,12 +1,12 @@
 get '/' do
   if @user = user_info
-    if @repos = Cache["repos"].get(@user.name)
-      $logger.info "cache hit (#{@user.name}.repos)"
+    if @github = Cache["github"].get(@user.name)
+      $logger.info "cache hit (#{@user.name}'s repos and gists)"
     else
-      $logger.info "get #{@user.name}'s repos"
+      $logger.info "get #{@user.name}'s repos and gists"
       client = Octokit::Client.new :oauth_token => @user.oauth_token
-      @repos = client.repos
-      Cache["repos"].set @user.name, @repos, :expire => 3600
+      @github = {"repos" => client.repos, "gists" => client.gists}
+      Cache["github"].set @user.name, @github, :expire => 3600
     end
   end
   haml :index
