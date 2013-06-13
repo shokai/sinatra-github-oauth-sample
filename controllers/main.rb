@@ -12,6 +12,6 @@ get '/' do
   haml :index
 end
 
-get '/*.css' do |path|
-  scss path.to_sym
+get '/style.css' do
+  scss :style
 end
